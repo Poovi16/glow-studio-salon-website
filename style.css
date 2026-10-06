@@ -1,0 +1,864 @@
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    background-color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: 0.3s ease;
+}
+
+
+/* ========================================
+   HEADER / NAVBAR
+======================================== */
+
+header {
+    background-color: rgba(17, 17, 17, 0.95);
+    padding: 22px 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #c9a227;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c9a227;
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("images/salon.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content p:first-child {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.hero-content h2 {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    letter-spacing: 0.3px;
+}
+
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    border-radius: 3px;
+
+    transition: all 0.3s ease;
+}
+
+.hero-buttons a:first-child {
+    background-color: #c9a227;
+    color: white;
+    border: 1px solid white;
+}
+
+.hero-buttons a:last-child {
+    background-color: #25d366;
+    color: white;
+    border: 1px solid white;
+}
+
+.hero-buttons a:first-child:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.hero-buttons a:last-child:hover {
+    background-color: white;
+    color: #111;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+#about {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 80px 10%;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content > p:first-child {
+    color: #c9a227;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.about-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.about-content > p:nth-of-type(2) {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #555;
+
+    margin-bottom: 30px;
+}
+
+.about-content a {
+    display: inline-block;
+
+    padding: 13px 26px;
+
+    background-color: #c9a227;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.about-content a:hover {
+    background-color: #111;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   COMMON SECTION HEADING
+======================================== */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: #c9a227;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+}
+
+
+/* ========================================
+   SERVICES SECTION
+======================================== */
+
+#services {
+    padding: 100px 10%;
+
+    background-color: #f8f6f1;
+}
+
+.services-container {
+    display: flex;
+
+    gap: 25px;
+
+    justify-content: center;
+}
+
+.service-card {
+    flex: 1;
+
+    background-color: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border: 1px solid #e5dfd2;
+
+    transition: 0.3s ease;
+}
+
+.service-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.service-card span {
+    color: #c9a227;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   GALLERY SECTION
+======================================== */
+
+#gallery {
+    padding: 100px 10%;
+
+    background-color: #111;
+}
+
+#gallery .section-heading h2 {
+    color: white;
+}
+
+#gallery .section-heading p {
+    color: #c9a227;
+}
+
+.gallery-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   TESTIMONIALS SECTION
+======================================== */
+
+#testimonials {
+    padding: 100px 10%;
+
+    background-color: #f8f6f1;
+}
+
+.testimonials-container {
+    display: flex;
+
+    gap: 25px;
+}
+
+.testimonial-card {
+    flex: 1;
+
+    background-color: white;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    border: 1px solid #e5dfd2;
+
+    transition: 0.3s ease;
+}
+
+.testimonial-card p {
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+    margin-bottom: 25px;
+}
+
+.testimonial-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    margin-bottom: 6px;
+}
+
+.testimonial-card span {
+    color: #c9a227;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+#contact {
+    padding: 100px 10%;
+
+    background-color: white;
+}
+
+#contact .section-heading {
+    margin-bottom: 60px;
+}
+
+.contact-container {
+    display: flex;
+
+    gap: 60px;
+
+    align-items: stretch;
+}
+
+
+/* ========================================
+   CONTACT INFORMATION
+======================================== */
+
+.contact-info {
+    flex: 1;
+
+    padding: 45px;
+
+    background-color: #111;
+
+    color: white;
+}
+
+.contact-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #ccc;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item strong {
+    display: block;
+
+    color: #c9a227;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+.contact-item p {
+    color: #ddd;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   BOOKING FORM
+======================================== */
+
+.booking-form {
+    flex: 1;
+
+    padding: 45px;
+
+    border: 1px solid #e5dfd2;
+
+    background-color: #f8f6f1;
+}
+
+.booking-form h3 {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+#bookingForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #ddd;
+
+    background-color: white;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    border-color: #c9a227;
+}
+
+#bookingForm button {
+    margin-top: 10px;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    background-color: #25d366;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#bookingForm button:hover {
+    background-color: #111;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background-color: #111;
+
+    color: white;
+}
+
+footer h3 {
+    font-family: Georgia, serif;
+
+    color: #c9a227;
+
+    font-size: 26px;
+
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 50px;
+    }
+
+    #about {
+        gap: 35px;
+
+        padding: 70px 7%;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+    }
+
+    #services,
+    #gallery,
+    #testimonials,
+    #contact {
+        padding: 80px 7%;
+    }
+
+    .contact-container {
+        gap: 30px;
+    }
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    #home {
+        min-height: 80vh;
+    }
+
+    .hero-content h2 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 220px;
+
+        text-align: center;
+    }
+
+
+    /* ABOUT */
+
+    #about {
+        flex-direction: column;
+
+        padding: 70px 6%;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+
+    /* SERVICES */
+
+    .services-container {
+        flex-direction: column;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 350px;
+    }
+
+
+    /* TESTIMONIALS */
+
+    .testimonials-container {
+        flex-direction: column;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .booking-form {
+        padding: 30px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    .hero-content h2 {
+        font-size: 34px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .about-image img {
+        height: 320px;
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+    .contact-info h3,
+    .booking-form h3 {
+        font-size: 27px;
+    }
+}
+
